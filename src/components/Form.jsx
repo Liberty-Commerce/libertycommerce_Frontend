@@ -2,11 +2,16 @@ import React, {useState} from 'react'
 
 function Form() {
 
-    const [user, setUser] = useState({});
+    const inicialState = {
+        textName : '',
+        password : ''
+    }
+
+    const [user, setUser] = useState(inicialState);
 
     const getDataInput = (e) =>{
         const {name , value} = e.target;
-        setUser({[name]:value});
+        setUser({...user, [name]:value});
     }
 
     const handleForm = (e) => {
