@@ -1,10 +1,10 @@
 import React from 'react';
-import Form from './components/Form';
+import Perfil from './container/Perfil';
 
 function App() {
   return (
     <div className="">
-      <Form/>
+      <Perfil />
     </div>
   )
 }
