@@ -1,12 +1,15 @@
 import React from 'react';
 import Form from './components/Form';
+import ProfyleTipe from './components/ProfileType/ProfileType';
 
 function App() {
+
   return (
     <div className="">
-      <Form/>
+      <Form />
+      <ProfyleTipe />
     </div>
   )
 }
 
-export default App
+export default App;
