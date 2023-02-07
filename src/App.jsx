@@ -1,23 +1,24 @@
 import React from 'react';
-<<<<<<< HEAD
+
 import Perfil from './container/Perfil';
-=======
+
 import Form from './components/Form';
 import ProfyleTipe from './components/ProfileType/ProfileType';
->>>>>>> develop-barera
+//comentario:develop-barera
 
 function App() {
 
   return (
+    <>
+    {/* HEAD */}
     <div className="">
-<<<<<<< HEAD
       <Perfil />
-=======
       <Form />
       <ProfyleTipe />
->>>>>>> develop-barera
+      {/* develop-barera */}
     </div>
-  )
+    </>
+  );
 }
 
 export default App;
