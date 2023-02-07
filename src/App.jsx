@@ -10,12 +10,12 @@ function App() {
 
   return (
     <>
-    {/* HEAD */}
+    {/*Esto es un comtario HEAD */}
     <div className="">
       <Perfil />
       <Form />
       <ProfyleTipe />
-      {/* develop-barera */}
+      {/*Esto es un comentario develop-barera */}
     </div>
     </>
   );
