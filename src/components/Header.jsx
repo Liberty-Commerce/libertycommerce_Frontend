@@ -100,7 +100,7 @@ export const Header = ({
 								<span className='text-xl font-black'>${total}</span>
 							</div>
 
-							<button className='border-none bg-black #f8fafc pl-3.5 block w-full mt-2.5' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc pl-3.5 block w-full mt-2.5 my-2.5 rounded-b-xl cursor-pointer text-xs ease-in duration-300 font-sans' onClick={onCleanCart}>
 								Vaciar Carrito
 							</button>
 						</>
