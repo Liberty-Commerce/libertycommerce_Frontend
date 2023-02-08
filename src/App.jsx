@@ -18,9 +18,9 @@ function App() {
           {/* <Route path="*" element={<Notfound/>}/> */}
           <Route path="*" element={<Notfound/>}/>
           {/*Login*/}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
           {/*Pagina principal*/}
-
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
