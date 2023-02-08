@@ -27,11 +27,11 @@ export const Header = ({
 	};
 
 	return (
-		<div className="bg-[#333] m-0 m-auto">
+		<div className="bg-[#333] m-0 m-auto max-w-screen-xl">
 		<header className="flex-auto flex justify-between py-30 px-0 px-40 px-0">
 			<h1>Tienda</h1>
 
-			<div className='container-icon'>
+			<div className="relative">
 				<div
 					className='container-cart-icon'
 					onClick={() => setActive(!active)}
@@ -50,13 +50,13 @@ export const Header = ({
 							d='M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
 						/>
 					</svg>
-					<div className='count-products'>
-						<span id='contador-productos'>{countProducts}</span>
+					<div className='absolute top-2/4 right-0 bg-black bg-white w-6 h-6 flex justify-center items-center rounded-3xl'>
+						<span className='text-xs'>{countProducts}</span>
 					</div>
 				</div>
 
-				<div
-					className={`container-cart-products ${
+				<div 
+					className={`absolute top-12 right-0 bg-white w-96 z-40 shadow-gray-100 rounded-xl ${
 						active ? '' : 'hidden-cart'
 					}`}
 				>
@@ -64,7 +64,7 @@ export const Header = ({
 						<>
 							<div className='row-product'>
 								{allProducts.map(product => (
-									<div className='cart-product' key={product.id}>
+									<div className='flex items-center justify-between p-8 border-y-2 border-style: solid; bg-black' key={product.id}>
 										<div className='info-cart-product'>
 											<span className='cantidad-producto-carrito'>
 												{product.quantity}
