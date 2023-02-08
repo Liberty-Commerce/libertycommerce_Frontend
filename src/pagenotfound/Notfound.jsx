@@ -1,6 +1,5 @@
-// import paginanoencontrada from "../assests/images/paginanoencontrada.jpg";
-
-
+import React from 'react';
+import paginanocontrada from "../assets/paginanocontrada.jpg";
 
 function Notfound() {
   return (
@@ -8,8 +7,7 @@ function Notfound() {
 
       <div className="flex justify-center">
         <div>
-          {/* <img className=" p-4 border-4 border-none" src={paginanoencontrada} /> */}
-          <h1>pagina no encontrada</h1>
+          <img className=" p-4 border-4 border-none" src={paginanocontrada} />
         </div>
       </div>
     </>
