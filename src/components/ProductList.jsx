@@ -29,7 +29,7 @@ export const ProductList = ({
 		<div className='grid gap-2.5 grid-cols-3'>
 			{data.map(product => (
 				<div className='rounded-xl ' key={product.id}>
-					<figure>
+					<figure className='overflow-hidden'>
 						<img className="w-full h-72 object-cover rounded-t-xl rounded-t-xl rounded-none rounded-none transition" src={product.img} alt={product.nameProduct} />
 					</figure>
 					<div className='p-3.5 leading-loose flex flex-col gap-2.5'>
