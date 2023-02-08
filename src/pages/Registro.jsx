@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Login() {
+function Registro() {
     return (
         <>
         <div>
-            <h1>Login</h1>
+            <h1>Registro</h1>
         </div>
         </>
     );
   }
-  export default Login;
+  export default Registro;
