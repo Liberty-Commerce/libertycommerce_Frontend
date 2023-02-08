@@ -27,7 +27,7 @@ export const Header = ({
 	};
 
 	return (
-		<header className='flex-auto'>
+		<header class='flex-auto flex justify-between py-30 px-0 px-40 px-0'>
 			<h1>Tienda</h1>
 
 			<div className='container-icon'>
