@@ -105,7 +105,7 @@ export const Header = ({
 							</button>
 						</>
 					) : (
-						<p className='p-5'>El carrito está vacío</p>
+						<p className='p-5 text-center'>El carrito está vacío</p>
 					)}
 				</div>
 			</div>

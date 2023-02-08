@@ -32,9 +32,9 @@ export const ProductList = ({
 					<figure>
 						<img className="max-w-full" src={product.img} alt={product.nameProduct} />
 					</figure>
-					<div className='info-product'>
+					<div className='p-3.5 leading-loose flex flex-col gap-2.5'>
 						<h2>{product.nameProduct}</h2>
-						<p className='price'>${product.price}</p>
+						<p className='text-xl font-black'>${product.price}</p>
 						<button onClick={() => onAddProduct(product)}>
 							Añadir al carrito
 						</button>
