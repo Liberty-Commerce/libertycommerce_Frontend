@@ -30,7 +30,7 @@ export const ProductList = ({
 			{data.map(product => (
 				<div className='rounded-xl ' key={product.id}>
 					<figure>
-						<img className="w-full h-72" src={product.img} alt={product.nameProduct} />
+						<img className="w-full h-72 object-cover rounded-t-xl rounded-t-xl rounded-none rounded-none" src={product.img} alt={product.nameProduct} />
 					</figure>
 					<div className='p-3.5 leading-loose flex flex-col gap-2.5'>
 						<h2>{product.nameProduct}</h2>
