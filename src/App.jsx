@@ -1,23 +1,23 @@
+
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Perfil from './container/Perfil';
+//subpaginas:
+import Home from "./pages/Home";
 
-import Form from './components/Form';
-import ProfyleTipe from './components/ProfileType/ProfileType';
 //comentario:develop-barera
 
 function App() {
 
   return (
-    <>
-    {/*Esto es un comtario HEAD */}
-    <div className="">
-      <Perfil />
-      <Form />
-      <ProfyleTipe />
-      {/*Esto es un comentario develop-barera */}
+    <div>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="*" element={<Notfound/>}/> */}
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-    </>
   );
 }
 
