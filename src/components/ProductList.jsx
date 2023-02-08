@@ -28,9 +28,9 @@ export const ProductList = ({
 	return (
 		<div className='grid gap-2.5 grid-cols-3'>
 			{data.map(product => (
-				<div className='item' key={product.id}>
+				<div className='rounded-xl ' key={product.id}>
 					<figure>
-						<img className="max-w-full" src={product.img} alt={product.nameProduct} />
+						<img className="w-full h-72" src={product.img} alt={product.nameProduct} />
 					</figure>
 					<div className='p-3.5 leading-loose flex flex-col gap-2.5'>
 						<h2>{product.nameProduct}</h2>
