@@ -27,7 +27,8 @@ export const Header = ({
 	};
 
 	return (
-		<header class='flex-auto flex justify-between py-30 px-0 px-40 px-0'>
+		<div className="bg-[#333] m-0 m-auto">
+		<header className="flex-auto flex justify-between py-30 px-0 px-40 px-0">
 			<h1>Tienda</h1>
 
 			<div className='container-icon'>
@@ -109,5 +110,6 @@ export const Header = ({
 				</div>
 			</div>
 		</header>
+		</div>
 	);
 };
