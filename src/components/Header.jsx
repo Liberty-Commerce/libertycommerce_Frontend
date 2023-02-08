@@ -65,14 +65,14 @@ export const Header = ({
 							<div className='row-product'>
 								{allProducts.map(product => (
 									<div className='flex items-center justify-between p-8 border-y-2 border-style: solid; bg-black' key={product.id}>
-										<div className='info-cart-product'>
-											<span className='cantidad-producto-carrito'>
+										<div className='flex justify-between flex-initial'>
+											<span className='font-normal text-xl'>
 												{product.quantity}
 											</span>
-											<p className='titulo-producto-carrito'>
+											<p className='text-xl'>
 												{product.nameProduct}
 											</p>
-											<span className='precio-producto-carrito'>
+											<span className='font-bold text-xl ml-2.5'>
 												${product.price}
 											</span>
 										</div>
@@ -95,12 +95,12 @@ export const Header = ({
 								))}
 							</div>
 
-							<div className='cart-total'>
-								<h3>Total:</h3>
-								<span className='total-pagar'>${total}</span>
+							<div className='flex justify-center items-center p-5 gap-5'>
+								<h3 className='text-xl font-bold'>Total:</h3>
+								<span className='text-xl font-black'>${total}</span>
 							</div>
 
-							<button className='btn-clear-all' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc pl-3.5 block w-full mt-2.5' onClick={onCleanCart}>
 								Vaciar Carrito
 							</button>
 						</>
