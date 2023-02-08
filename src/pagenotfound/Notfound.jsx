@@ -5,12 +5,11 @@
 function Notfound() {
   return (
     <>
-      <Navbar />
 
       <div className="flex justify-center">
         <div>
           {/* <img className=" p-4 border-4 border-none" src={paginanoencontrada} /> */}
-          paginanoencontrada
+          <h1>pagina no encontrada</h1>
         </div>
       </div>
     </>
