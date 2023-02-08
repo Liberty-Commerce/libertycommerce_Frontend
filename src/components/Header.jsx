@@ -64,7 +64,7 @@ export const Header = ({
 						<>
 							<div className=' row-product'>
 								{allProducts.map(product => (
-									<div className='flex items-center justify-between	 cart-product' key={product.id}>
+									<div className='flex items-center justify-between p-8 rounded-r-sm' key={product.id}>
 										<div className='info-cart-product'>
 											<span className='cantidad-producto-carrito'>
 												{product.quantity}
