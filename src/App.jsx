@@ -17,8 +17,10 @@ function App() {
         <Routes>
           {/* <Route path="*" element={<Notfound/>}/> */}
           <Route path="*" element={<Notfound/>}/>
-          {/*Pagina Principal*/}
+          {/*Login*/}
           <Route path="/" element={<Home />} />
+          {/*Pagina principal*/}
+
         </Routes>
       </BrowserRouter>
     </div>
