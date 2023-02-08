@@ -42,7 +42,7 @@ export const Header = ({
 						viewBox='0 0 24 24'
 						strokeWidth='1.5'
 						stroke='currentColor'
-						className='w-10 h-10 stroke-black hover:cursor-pointer'
+						className='w-10 h-10 stroke-black hover:cursor-pointer hover:bg-slate-800'
 					>
 						<path
 							strokeLinecap='round'
@@ -56,15 +56,15 @@ export const Header = ({
 				</div>
 
 				<div
-					className={`absolute top-12 right-0 container-cart-products ${
-						active ? '' : 'hidden-cart'
+					className={`absolute top-12 right-0 color:#f8fafc; w-96 z-40 shadow-xl rounded-xl  ${
+						active ? '' : 'hidden'
 					}`}
 				>
 					{allProducts.length ? (
 						<>
-							<div className='row-product'>
+							<div className=' row-product'>
 								{allProducts.map(product => (
-									<div className='cart-product' key={product.id}>
+									<div className='flex items-center justify-between	 cart-product' key={product.id}>
 										<div className='info-cart-product'>
 											<span className='cantidad-producto-carrito'>
 												{product.quantity}
