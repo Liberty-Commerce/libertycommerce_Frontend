@@ -35,7 +35,7 @@ export const ProductList = ({
 					<div className='p-3.5 leading-loose flex flex-col gap-2.5'>
 						<h2>{product.nameProduct}</h2>
 						<p className='text-xl font-black'>${product.price}</p>
-						<button onClick={() => onAddProduct(product)}>
+						<button className='border-none bg-none bg-black #f8fafc p-4 p-2.5 cursor-pointer' onClick={() => onAddProduct(product)}>
 							Añadir al carrito
 						</button>
 					</div>
