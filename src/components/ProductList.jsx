@@ -26,7 +26,7 @@ export const ProductList = ({
 	};
 
 	return (
-		<div className='container-items'>
+		<div className='grid gap-2.5 grid-cols-3'>
 			{data.map(product => (
 				<div className='item' key={product.id}>
 					<figure>
