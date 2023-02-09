@@ -5,13 +5,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Notfound from './pagenotfound/Notfound';
 
 //subpaginas:
-//1
+
+//1 registro usuarios
 import Registro from "./pages/Registro";
-//2
+
+//2 Login ingreso usuario
 import Login from "./pages/Login";
-//3
+
+//3 Pagina principal despues de Registro o logueo
 import Home from "./pages/Home";
-import Perfil from './pages/Perfil';
+
+//4 Perfil usuario
+import Profile from './pages/Profile';
+
+//5 olvide contraseña
+import Olvide from './pages/Olvide';
+
+//6 pagina detalles pago
+import Pay from './pages/Pay';
 
 //comentario:develop-barera
 
@@ -27,10 +38,14 @@ function App() {
           <Route path="/" element={<Registro />} />
           {/*Login*/}
           <Route path="/login" element={<Login />} />
+          {/*Perfil usuario*/}
+          <Route path="/olvide" element={<Olvide />} />
           {/*Pagina principal*/}
           <Route path="/home" element={<Home />} />
           {/*Perfil usuario*/}
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/profile" element={<Profile />} />
+          {/*pay*/}
+          <Route path="/pay" element={<Pay />} />
 
         </Routes>
       </BrowserRouter>
