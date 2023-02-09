@@ -28,21 +28,21 @@ export const Header = ({
 
 	return (
 		<>
-		<header className='flex  justify-between p-8 p-0 p-10 p-0'>
-			<h1>Tienda</h1>
+		<header className='bg-white flex  justify-between p-8 p-0 p-10 p-0'>
+			<h1 className='text-black'>Tienda</h1>
 
 			<div className='relative'>
 				<div
-					className='container-cart-icon'
+					className='bg-current container-cart-icon '
 					onClick={() => setActive(!active)}
-				>
+					>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'
 						strokeWidth='1.5'
 						stroke='currentColor'
-						className='w-10 h-10 stroke-black hover:cursor-pointer hover:bg-slate-800'
+						className='w-10 h-10 stroke-black hover:cursor-pointer hover:animate-bounce'
 					>
 						<path
 							strokeLinecap='round'
@@ -56,20 +56,20 @@ export const Header = ({
 				</div>
 
 				<div
-					className={`absolute top-12 right-0 color:#f8fafc; w-96 z-40 shadow-xl rounded-xl  ${
+					className={`absolute top-12 right-0 color:#f8fafc; bg-black w-96 z-40 shadow-xl rounded-xl   ${
 						active ? '' : 'hidden'
 					}`}
 				>
 					{allProducts.length ? (
 						<>
-							<div className=' row-product'>
+							<div className=' row-product bg-black'>
 								{allProducts.map(product => (
 									<div className='flex items-center justify-between p-8 rounded-r-sm' key={product.id}>
 										<div className='flex justify-between flex-[0.8]'>
 											<span className='font-normal text-xl'>
 												{product.quantity}
 											</span>
-											<p className='text-xl'>
+											<p className='text-xl '>
 												{product.nameProduct}
 											</p>
 											<span className='font-bold text-xl ml-2.5'>
@@ -95,17 +95,20 @@ export const Header = ({
 								))}
 							</div>
 
-							<div className='flex justify-center items-center p-5 gap-5'>
+							<div className='flex justify-center items-center p-5 gap-5 bg-black'>
 								<h3>Total:</h3>
 								<span className='text-xl font-black'>${total}</span>
 							</div>
 
-							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
 								Vaciar Carrito
+							</button>
+							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
+								Pagar
 							</button>
 						</>
 					) : (
-						<p className='cart-empty'>El carrito está vacío</p>
+						<p className='p-5 text-center text-black bg-white'>El carrito está vacío</p>
 					)}
 				</div>
 			</div>

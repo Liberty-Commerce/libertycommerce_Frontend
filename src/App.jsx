@@ -28,6 +28,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           {/*Pagina principal*/}
           <Route path="/home" element={<Home />} />
+
         </Routes>
       </BrowserRouter>
     </div>
