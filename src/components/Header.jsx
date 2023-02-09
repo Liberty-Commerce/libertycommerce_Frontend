@@ -62,14 +62,14 @@ export const Header = ({
 				>
 					{allProducts.length ? (
 						<>
-							<div className=' row-product bg-black'>
+							<div className=' row-product bg-black w-12'>
 								{allProducts.map(product => (
 									<div className='flex items-center justify-between p-8 rounded-r-sm' key={product.id}>
 										<div className='flex justify-between flex-[0.8]'>
 											<span className='font-normal text-xl'>
 												{product.quantity}
 											</span>
-											<p className='text-xl '>
+											<p className='text-xl'>
 												{product.nameProduct}
 											</p>
 											<span className='font-bold text-xl ml-2.5'>
@@ -100,10 +100,10 @@ export const Header = ({
 								<span className='text-xl font-black'>${total}</span>
 							</div>
 
-							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc p-4 block w-6/12  my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none right-full' onClick={onCleanCart}>
 								Vaciar Carrito
 							</button>
-							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
 								Pagar
 							</button>
 						</>

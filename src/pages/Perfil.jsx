@@ -1,7 +1,14 @@
 import React from 'react';
 
+
+
 //container
-import Pasarela from '../container/Pasarela';
+import Perfil from '../container/Perfil';
+
+import Form from '../components/Form';
+import ProfyleTipe from '../components/ProfileType/ProfileType';
+
+
 
 //comentario:develop-barera
 
@@ -10,8 +17,10 @@ function Home() {
         <>
         {/*Esto es un comtario HEAD */}
         <div className="">
-          {/*Galeria y pasarela de pagos */}
-          <Pasarela />
+          <Perfil />
+          {/*Form*/}
+          <Form />
+          <ProfyleTipe />
         </div>
         </>
     );

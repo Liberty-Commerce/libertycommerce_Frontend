@@ -11,6 +11,7 @@ import Registro from "./pages/Registro";
 import Login from "./pages/Login";
 //3
 import Home from "./pages/Home";
+import Perfil from './pages/Perfil';
 
 //comentario:develop-barera
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           {/*Pagina principal*/}
           <Route path="/home" element={<Home />} />
+          {/*Pagina principal*/}
+          <Route path="/perfil" element={<Perfil />} />
 
         </Routes>
       </BrowserRouter>
