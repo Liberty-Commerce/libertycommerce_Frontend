@@ -65,14 +65,14 @@ export const Header = ({
 							<div className=' row-product'>
 								{allProducts.map(product => (
 									<div className='flex items-center justify-between p-8 rounded-r-sm' key={product.id}>
-										<div className='info-cart-product'>
-											<span className='cantidad-producto-carrito'>
+										<div className='flex justify-between flex-[0.8]'>
+											<span className='font-normal text-xl'>
 												{product.quantity}
 											</span>
-											<p className='titulo-producto-carrito'>
+											<p className='text-xl'>
 												{product.nameProduct}
 											</p>
-											<span className='precio-producto-carrito'>
+											<span className='font-bold text-xl ml-2.5'>
 												${product.price}
 											</span>
 										</div>
@@ -82,7 +82,7 @@ export const Header = ({
 											viewBox='0 0 24 24'
 											strokeWidth='1.5'
 											stroke='currentColor'
-											className='icon-close'
+											className='stroke-red-600 cursor-pointer'
 											onClick={() => onDeleteProduct(product)}
 										>
 											<path
@@ -95,12 +95,12 @@ export const Header = ({
 								))}
 							</div>
 
-							<div className='cart-total'>
+							<div className='flex justify-center items-center p-5 gap-5'>
 								<h3>Total:</h3>
-								<span className='total-pagar'>${total}</span>
+								<span className='text-xl font-black'>${total}</span>
 							</div>
 
-							<button className='btn-clear-all' onClick={onCleanCart}>
+							<button className='border-none bg-black #f8fafc p-4 block w-9/12 my-2.5 rounded-b-xl cursor-pointer p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
 								Vaciar Carrito
 							</button>
 						</>
