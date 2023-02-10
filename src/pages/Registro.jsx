@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
 
 function Registro() {
-    return (
-        <>
-        <div>
-            
-        </div>
-        </>
-    );
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("You clicked submit.");
   }
-  export default Registro;
+  return (
+    <>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </>
+  );
+}
+export default Registro;

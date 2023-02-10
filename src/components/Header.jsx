@@ -103,8 +103,10 @@ export const Header = ({
 							<button className='border-none bg-black #f8fafc p-4 block w-6/12  my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none right-full' onClick={onCleanCart}>
 								Vaciar Carrito
 							</button>
-							<button className='border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none' onClick={onCleanCart}>
-								Pagar
+							<button className='border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none'>
+							 	<a href="/pay">
+										Pagar
+								</a>
 							</button>
 						</>
 					) : (
