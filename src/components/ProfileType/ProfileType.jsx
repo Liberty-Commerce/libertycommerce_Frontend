@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 function ProfyleTipe() {
 
-    const bgWhite = 'flex-initial border text-center bg-white rounded-lg text-xs text-black m-2 pl-4 pr-4'
+    const bgWhite = 'flex-initial border text-center bg-white rounded-lg text-xs text-black mr-2 mt-2 px-4'
 
-    const bgOrange = 'flex-initial border text-center bg-orange-200 rounded-lg text-xs text-black m-2 pl-4 pr-4'
+    const bgOrange = 'flex-initial border text-center bg-teal-600 rounded-lg text-xs text-black mr-2 mt-2 pl-4 pr-4'
 
     const [ selected, setSelected ] = useState('Admin');
 
@@ -13,7 +13,7 @@ function ProfyleTipe() {
     }
   
   return (
-    <div className="flex">
+    <div className="flex ">
       <div
         className={ selected === 'Admin' ? bgOrange : bgWhite }
         onClick = { () => handleClick('Admin') }
