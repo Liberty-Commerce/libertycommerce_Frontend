@@ -15,7 +15,7 @@ function Home() {
     <>
       {/*border*/}
       <div className="bg-white box-content	 h-50 w-100 p-6 border-3">
-        {/*Galeria y pasarela de pagos */}
+        {/*Cart to pay carrito de compras */}
         <Header
           allProducts={allProducts}
           setAllProducts={setAllProducts}
@@ -27,6 +27,7 @@ function Home() {
 
         <br />
 
+        {/*Lista Stock*/}
         <ProductList
           allProducts={allProducts}
           setAllProducts={setAllProducts}
