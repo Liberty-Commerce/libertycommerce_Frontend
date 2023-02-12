@@ -2,7 +2,7 @@ import React from 'react'
 
 function Followers() {
     return (
-        <div className='w-96 flex border-1 mt-8 '>
+        <div className='w-96 flex border-1 mt-4 '>
             <div className='w-24 border'>
                 <p className='text-lg text-center'>405</p>
                 <p className='text-sm text-center'>Seguidores</p>
