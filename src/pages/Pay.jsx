@@ -1,10 +1,11 @@
 import React from "react";
 
-function Pay() {
+export const Pay = ({ nameProduct,price, id, img }) => {
+
+
   return (
-    <>
-      {/* Pay*/}
-      <div className="">Pagar</div>
+    <> 
+      
     </>
   );
 }
