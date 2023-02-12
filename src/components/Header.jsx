@@ -9,10 +9,8 @@ import Tienda from "../components/shopping/Tienda";
 export const Header = ({
   allProducts,
   setAllProducts,
-  total,
   countProducts,
   setCountProducts,
-  setTotal,
 }) => {
   const [active, setActive] = useState(false);
 
@@ -22,12 +20,6 @@ export const Header = ({
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
     setAllProducts(results);
-  };
-
-  const onCleanCart = () => {
-    setAllProducts([]);
-    setTotal(0);
-    setCountProducts(0);
   };
 
   return (
@@ -63,15 +55,22 @@ export const Header = ({
                       className="flex items-center justify-between p-8 rounded-r-sm"
                       key={product.id}
                     >
+                      
+                      {/*Detalles Productos*/}
                       <div className="flex justify-between flex-[0.8]">
                         <span className="font-normal text-xl">
                           {product.quantity}
                         </span>
+                        {/*espacio*/}
+                        <div className="space-y-2">&nbsp;</div>
                         <p className="text-xl">{product.nameProduct}</p>
                         <span className="font-bold text-xl ml-2.5">
                           ${product.price}
                         </span>
                       </div>
+                      {/*Final Detalles Productos*/}
+
+                    {/*Vaciar productos*/}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -91,19 +90,8 @@ export const Header = ({
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center p-5 gap-5 bg-black">
-                  <h3>Total:</h3>
-                  <span className="text-xl font-black">${total}</span>
-                </div>
-
-                <button
-                  className="border-none bg-black #f8fafc p-4 block w-6/12  my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none right-full"
-                  onClick={onCleanCart}
-                >
-                  Vaciar Carrito
-                </button>
-                <button className="border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-150 rounded-none">
-                  <a href="/pay">Pagar</a>
+                <button className="border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-100 rounded-none">
+                  <a href="/cart">Ver carro de compras</a>
                 </button>
               </>
             ) : (

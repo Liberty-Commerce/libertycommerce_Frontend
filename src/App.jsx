@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //Pagina no encontrada si el usuario no encutra lo que no hay en el sitio web:
-import Notfound from './pagenotfound/Notfound';
+import Notfound from "./pagenotfound/Notfound";
 
 //subpaginas:
 
@@ -16,24 +16,23 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 
 //4 Perfil usuario
-import Profile from './pages/Profile';
+import Profile from "./pages/Profile";
 
 //5 olvide contraseña
-import Olvide from './pages/Olvide';
+import Olvide from "./pages/Olvide";
 
 //6 pagina detalles pago
-import Pay from './pages/Pay';
+import Cart from "./pages/Cart";
 
 //comentario:develop-barera
 
 function App() {
-
   return (
     <div>
       <BrowserRouter>
         <Routes>
           {/* <Route path="*" element={<Notfound/>}/> */}
-          <Route path="*" element={<Notfound/>}/>
+          <Route path="*" element={<Notfound />} />
           {/*Registro*/}
           <Route path="/" element={<Registro />} />
           {/*Login*/}
@@ -45,8 +44,7 @@ function App() {
           {/*Perfil usuario*/}
           <Route path="/profile" element={<Profile />} />
           {/*pay*/}
-          <Route path="/pay" element={<Pay />} />
-
+          <Route path="/cart" element={<Cart />}/>
         </Routes>
       </BrowserRouter>
     </div>
