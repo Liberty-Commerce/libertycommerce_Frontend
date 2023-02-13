@@ -25,14 +25,14 @@ export const data = [
 		nameProduct: 'Perfume',
 		price: 50,		
 		img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-		quantity: 2		
+		quantity: 1		
 	},
 	{
 		id: 5,
 		nameProduct: 'Audifonos',
 		price: 20,		
 		img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-		quantity: 3
+		quantity: 1
 	},
 	// Aquí pueden agregar más o modificar los productos existentes
 ];

@@ -15,6 +15,7 @@ function Home() {
     <>
       {/*border*/}
       <div className="bg-white box-content	 h-50 w-100 p-6 border-3">
+        <br />
         {/*Cart to pay carrito de compras */}
         <Header
           allProducts={allProducts}

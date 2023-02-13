@@ -37,13 +37,13 @@ export const Header = ({
               className="w-10 h-10 stroke-black hover:cursor-pointer hover:animate-bounce"
             />
             <br />
-            <div className="absolute top-2/4 right-0 bg-black color:#fff; w-6 h-6 flex justify-center items-center rounded-full">
+            <div className="bg-black absolute top-2/4 right-0 left-8 color:#fff; w-6 h-6 flex justify-center items-center rounded-full">
               <span id="text-xs">{countProducts}</span>
             </div>
           </div>
 
           <div
-            className={`absolute top-12 right-0 color:#f8fafc; bg-black w-96 z-40 shadow-xl rounded-xl   ${
+            className={`bg-white absolute top-12 right-0  w-96 z-40 shadow-xl rounded-xl   ${
               active ? "" : "hidden"
             }`}
           >
@@ -55,16 +55,15 @@ export const Header = ({
                       className="flex items-center justify-between p-8 rounded-r-sm"
                       key={product.id}
                     >
-                      
                       {/*Detalles Productos*/}
-                      <div className="flex justify-between flex-[0.8]">
-                        <span className="font-normal text-xl">
+                      <div className="bg-white flex justify-between flex-[0.8]">
+                        <span className="text-black	font-normal text-xl">
                           {product.quantity}
                         </span>
                         {/*espacio*/}
                         <div className="space-y-2">&nbsp;</div>
-                        <p className="text-xl">{product.nameProduct}</p>
-                        <span className="font-bold text-xl ml-2.5">
+                        <p className="text-xl text-black	">{product.nameProduct}</p>
+                        <span className="font-bold text-black	 text-xl ml-2.5">
                           ${product.price}
                         </span>
                       </div>
@@ -90,8 +89,10 @@ export const Header = ({
                   ))}
                 </div>
 
-                <button className="border-none bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-100 rounded-none">
-                  <a href="/cart">Ver carro de compras</a>
+                <button className="border-solid bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-100 rounded-none">
+                  <a href="/cart">
+                    Ver carro de compras
+                    </a>
                 </button>
               </>
             ) : (
