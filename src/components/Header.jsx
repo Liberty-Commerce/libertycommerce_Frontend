@@ -37,26 +37,26 @@ export const Header = ({
               className="w-10 h-10 stroke-black hover:cursor-pointer hover:animate-bounce"
             />
             <br />
-            <div className="bg-black absolute top-2/4 right-0 left-8 color:#fff; w-6 h-6 flex justify-center items-center rounded-full">
+            <div className="bg-black absolute top-2/4 right-0 left-8 w-6 h-6 flex justify-center items-center rounded-full">
               <span id="text-xs">{countProducts}</span>
             </div>
           </div>
 
           <div
-            className={`bg-white absolute top-12 right-0  w-96 z-40 shadow-xl rounded-xl   ${
+            className={`bg-gray-300 absolute top-12 right-0  w-96 z-40 shadow-xl rounded-xl   ${
               active ? "" : "hidden"
             }`}
           >
             {allProducts.length ? (
               <>
-                <div className=" row-product bg-black w-12">
+                <div className="row-product  w-12">
                   {allProducts.map((product) => (
                     <div
                       className="flex items-center justify-between p-8 rounded-r-sm"
                       key={product.id}
                     >
                       {/*Detalles Productos*/}
-                      <div className="bg-white flex justify-between flex-[0.8]">
+                      <div className="flex justify-between flex-[0.8]">
                         <span className="text-black	font-normal text-xl">
                           {product.quantity}
                         </span>
