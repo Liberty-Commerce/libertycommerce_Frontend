@@ -2,6 +2,7 @@ import { useState } from "react";
 
 // imagen cart:
 import cart from "../assets/img/cart.jpg";
+import user from "../assets/img/user.png";
 
 //components:
 import Tienda from "../components/shopping/Tienda";
@@ -24,8 +25,13 @@ export const Header = ({
 
   return (
     <>
-      <header className="bg-white flex  justify-between p-8 p-0 p-10 p-0">
+      <header className="bg-white flex  justify-between p-8 p-0 p-10 p-0 max-sm	max-md max-md max-xl max-2xl">
         <Tienda />
+        <img
+              src={user}
+              alt="user"
+              className="w-10 h-10 stroke-black hover:cursor-pointer "
+            />
         <div className="relative">
           <div
             className="bg-current container-cart-icon "
@@ -34,7 +40,7 @@ export const Header = ({
             <img
               src={cart}
               alt="cart"
-              className="w-10 h-10 stroke-black hover:cursor-pointer hover:animate-bounce"
+              className="w-10 h-10 stroke-black hover:cursor-pointer hover:animate-bounce md:max-xl:flex"
             />
             <br />
             <div className="bg-black absolute top-2/4 right-0 left-8 w-6 h-6 flex justify-center items-center rounded-full">
@@ -62,14 +68,16 @@ export const Header = ({
                         </span>
                         {/*espacio*/}
                         <div className="space-y-2">&nbsp;</div>
-                        <p className="text-xl text-black	">{product.nameProduct}</p>
+                        <p className="text-xl text-black	">
+                          {product.nameProduct}
+                        </p>
                         <span className="font-bold text-black	 text-xl ml-2.5">
                           ${product.price}
                         </span>
                       </div>
                       {/*Final Detalles Productos*/}
 
-                    {/*Vaciar productos*/}
+                      {/*Vaciar productos*/}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -88,11 +96,9 @@ export const Header = ({
                     </div>
                   ))}
                 </div>
-
-                <button className="border-solid bg-black #f8fafc p-4 block w-3/12 my-2.5 rounded-b-xl cursor-pointer text-xs transition p-0 hover:bg-black scale-100 rounded-none">
-                  <a href="/cart">
-                    Ver carro de compras
-                    </a>
+                {/* vaciar carro de compras: */}
+                <button className="bg-orange-500 border-solid #f8fafc space-x p-4 block w-3/12 rounded-lg cursor-pointer text-xs transition p-0 m-0	">
+                  <a href="/cart">Ver carro de compras</a>
                 </button>
               </>
             ) : (

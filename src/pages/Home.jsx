@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       {/*border*/}
-      <div className="bg-white box-content	 h-50 w-100 p-6 border-3">
+      <div className="bg-white max-sm	max-md max-md max-xl max-2xl box-content p-6 border-3">
         <br />
         {/*Cart to pay carrito de compras */}
         <Header
