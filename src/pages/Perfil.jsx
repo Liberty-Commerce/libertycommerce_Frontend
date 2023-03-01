@@ -1,34 +1,28 @@
-import React from 'react'
+import {useState} from 'react'
 import ProfileType from '../components/ProfileType/ProfileType'
 import SocialMedia from '../components/SocialMedia'
 import Followers from '../components/Followers'
 import NewProduct from '../components/NewProduct'
+import ModalProduct from '../components/ModalProduct'
+import Search from '../components/Search'
+
 
 import {AiOutlineGlobal} from 'react-icons/ai';
 
-const perfiles = [
-    {
-        id :1,
-        urlImg : '../../public/assets/product/product-cam.jpg',
-        textProduct : 'Camara',
-        price : '$300'
-    },
-    {
-        id:2,
-        urlImg : '../../public/assets/product/product-deso.jpg',
-        textProduct : 'Desodorante',
-        price : '$50'
-    },
-    {
-        id:3,
-        urlImg : '../../public/assets/product/product-deso.jpg',
-        textProduct : 'Desodorante',
-        price : '$50'
-    },
-    
-]
+//productos
+import product from '../json/product'
+
 
 function Perfil() {
+    const [modal, setModal] = useState(false);
+    const [DataModal, setDataModal] = useState({
+        imgProduct : "",
+        nameProduct : "",
+        priceProduct : "",
+        priceOriginal : "",
+        descripProduct : "",
+    });
+
     return (
         <div>
             {/* Header */}
@@ -57,8 +51,9 @@ function Perfil() {
                 </div>
             </div>
         
-            
-            <div className='w-full flex'>
+            <Search/>
+
+            <div className='w-full flex mt-5'>
                 {/* Bio */}
             
                 <div className='ml-5 w-96'>
@@ -69,10 +64,33 @@ function Perfil() {
                 </div>
                 {/* news product */}
                 <div className='flex items-center ml-5 flex-wrap'>
-                    {perfiles.map(items =>(
-                        <NewProduct key={items.id} imgProduct={items.urlImg} nameProduct={items.textProduct} priceProduct ={items.price} />
+                    {product.map((items)=>(
+                        <NewProduct 
+                        key={items.id}
+                        imgProduct={items.urlImg} 
+                        nameProduct={items.textProduct} 
+                        priceProduct ={items.price}
+                        priceOriginal ={items.priceOriginal}
+                        descripProduct = {items.descrip}
+                        modal = {modal}
+                        setModal = {setModal}
+                        setDataModal = {setDataModal} 
+                        />
                     ))}
                 </div>
+                {/* Modal */}
+                {
+
+                modal && ( <ModalProduct 
+                            setModal = {setModal}
+                            imgProduct ={DataModal.imgProduct}
+                            nameProduct = {DataModal.nameProduct}
+                            priceProduct = {DataModal.priceProduct}
+                            priceOriginal ={DataModal.priceOriginal}
+                            descripProduct = {DataModal.descripProduct}
+                            />
+                        )
+                }
             </div>
         </div>
         
