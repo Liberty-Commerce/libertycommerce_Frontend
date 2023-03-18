@@ -1,9 +1,12 @@
 import React from 'react'
+import ProductCatalogo from '../components/productCatalogo'
+
+
 
 function Home() {
     return (
-        <div>
-            
+        <div className='p-4'>
+           <ProductCatalogo/>
         </div>
     )
 }
