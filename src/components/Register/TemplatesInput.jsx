@@ -14,7 +14,7 @@ function TemplatesInputText({t_type, t_placeholder, t_name}, t_class) {
 function TemplateInputExpecialPais({t_name,t_img,children} ){
     return(
         <div>
-            <select name={t_name} className='text-black w-80'>
+            <select name={t_name} className='text-black w-80 rounded-lg'>
                 <img src={t_img} alt={t_img} />
                 {children}
             </select>

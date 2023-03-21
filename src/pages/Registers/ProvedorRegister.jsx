@@ -1,6 +1,6 @@
 import React from 'react'
-import TemplateDataRegister from '../TemplateDataRegister'
-import { TemplateInputExpecialPais} from '../TemplatesInput'
+import TemplateDataRegister from '../../components/Register/TemplateDataRegister'
+import { TemplateInputExpecialPais} from '../../components/Register/TemplatesInput'
 import { BsBank } from 'react-icons/bs'
 
 function ProvedorRegister() {
